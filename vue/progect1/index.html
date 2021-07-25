@@ -9,11 +9,11 @@
 </head>
 
 <body>
-    <div class="container pt-5">
-        <div class="card center">
-            <h1>counter: 0</h1>
+    <div class="container pt-5" id="app">
+        <div class="card center" >
+            <h1>{{title}}: {{counter}}</h1>
             <div>
-                <button class="btn primary">добавить</button>
+                <button class="btn primary" v-on:click = "counter++">добавить</button>
                 <button class="btn danger">вычесть</button>
 
             </div>
