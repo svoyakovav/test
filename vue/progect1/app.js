@@ -13,7 +13,7 @@ const App ={
             console.log(event.target.value);
             this.inputValue = event.target.value;
         },
-        addHandler(){
+        addNote(){
             this.notes.push(this.inputValue);
             this.inputValue = '';
         }
