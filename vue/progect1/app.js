@@ -5,13 +5,17 @@ const App ={
             title: 'Счетчик',
             myplaceholder: 'введите че нить',
             inputValue : 'dfdfsf',
-            notes:['Заметки', 'note1']
+            notes:['Заметки', 'note1', 'lljj']
         } 
     }, 
     methods:{
         inputChangeHandler(event){
             console.log(event.target.value);
             this.inputValue = event.target.value +'hh';
+        },
+        addHandler(){
+            this.notes.push(this.inputValue);
+            this.inputValue = '';
         }
     }
 
