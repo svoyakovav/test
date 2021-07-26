@@ -11,7 +11,7 @@ const App ={
     methods:{
         inputChangeHandler(event){
             console.log(event.target.value);
-            this.inputValue = event.target.value +'hh';
+            this.inputValue = event.target.value;
         },
         addHandler(){
             this.notes.push(this.inputValue);
