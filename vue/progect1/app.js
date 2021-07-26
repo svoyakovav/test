@@ -4,13 +4,14 @@ const App ={
             counter : 0,
             title: 'Счетчик',
             myplaceholder: 'введите че нить',
-            inputValue : 'dfdfsf'
+            inputValue : 'dfdfsf',
+            notes:['Заметки', 'note1']
         } 
-    },
+    }, 
     methods:{
         inputChangeHandler(event){
-            //console.log(event.target.value);
-            this.inputValue = event.target.value;
+            console.log(event.target.value);
+            this.inputValue = event.target.value +'hh';
         }
     }
 
