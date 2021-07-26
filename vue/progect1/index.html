@@ -25,8 +25,9 @@
             </div>
              <button class="btn">add</button>
              <ul class="list">
-                 <li class="list-item" >
-                     {{notes[0]}}
+                 <li class="list-item" 
+                 v-for = "i in notes">
+                     {{i}}
                   </li>
              </ul>
             <hr/>
