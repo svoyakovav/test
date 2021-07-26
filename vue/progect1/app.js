@@ -5,7 +5,7 @@ const App ={
             title: 'Счетчик',
             myplaceholder: 'введите че нить',
             inputValue : 'dfdfsf',
-            notes:['Заметки', 'note1', 'lljj']
+            notes:['Заметки', 'note1']
         } 
     }, 
     methods:{
