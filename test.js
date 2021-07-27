@@ -1,2 +1,0 @@
-alert('hellow');
-alert('hellow'); 
