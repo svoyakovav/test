@@ -21,16 +21,11 @@
                  >
                 <!--button class="btn primary" v-on:click = "counter++">добавить</button>
                 <button class="btn danger" v-on:click = "counter--">вычесть</button-->
-            <button class="btn"
-             v-on:click="addNote"> добавить
-            </button>
+            <button class="btn" v-on:click="addNote"> добавить </button>
             </div>
-
              <ul class="list">
-                 <li class="list-item" 
-                 v-for = "i in notes">
-                     {{i}}
-                  </li>
+                <li class="list-item" 
+                    v-for = "i in notes"> {{i}} </li>
              </ul>
             <hr/>
         </div>
