@@ -13,11 +13,11 @@
         <div class="card" >
             <h1>{{title}}</h1>
             <div class="form-control">
-                <input type="text"
-                
+                <input type="text"               
                  v-bind:placeholder  ="myplaceholder"
                  v-bind:value = "inputValue"
                  v-on:input = "inputChangeHandler"
+                 v-on:keypress.enter = "addNote"
                  >
                 <!--button class="btn primary" v-on:click = "counter++">добавить</button>
                 <button class="btn danger" v-on:click = "counter--">вычесть</button-->
