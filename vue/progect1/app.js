@@ -7,7 +7,7 @@ const App ={
             inputValue : 'dfdfsf',
             notes:['Заметки', 'note1']
         } 
-    },  
+    }, 
     methods:{
         inputChangeHandler(event){
             console.log(event.target.value);
