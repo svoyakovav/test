@@ -16,7 +16,11 @@ const App ={
         addNote(){
             this.notes.push(this.inputValue);
             this.inputValue = '';
+        },
+        deletenote(key){
+            this.notes.splice(key,1);
         }
+
     }
 
     

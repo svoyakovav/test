@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="container pt-5" id="app" >
+    <div class="container pt-5" id="app"  >
         <div class="card" >
             <h1>{{title}}</h1>
             <div class="form-control" >
@@ -27,8 +27,15 @@
             </div>
              <ul class="list">
                 <li class="list-item" 
-                    v-for = "i in notes"> {{i}} </li>
-             </ul>
+                    v-for = "(name,i) in notes"> {{i+ ' '}}  {{name}}
+                    <button class="btn danger"
+                     v-on:click = "deletenote(i)"
+                     >
+                     удалить</button>
+                
+                </li>
+             
+                </ul>
             <hr/>
         </div>
 
