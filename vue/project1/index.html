@@ -17,10 +17,9 @@
                 <input type="text"  
                           
                  v-bind:placeholder  ="myplaceholder"
-                 v-bind:value = "inputValue"
-                 v-on:input = "inputChangeHandler"
-                 v-on:keypress.enter = "addNote"
-                 
+                 v-model = "inputValue"
+                 @keypress.enter = "addNote"
+
                  >
                 <!--button class="btn primary" v-on:click = "counter++">добавить</button>
                 <button class="btn danger" v-on:click = "counter--">вычесть</button-->
@@ -38,8 +37,9 @@
              
                 </ul>
             <hr/>
+            <span>{{doublecount}}</span>
         </div>
-
+    </hr>
     </div>
     <script src="https://unpkg.com/vue@next"></script>
     <script src="app.js"></script>

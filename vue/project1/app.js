@@ -22,7 +22,18 @@ const App ={
             this.notes.splice(key,1);
         }
 
-    }
+    },
+    computed:{
+        doublecount(){
+            return this.notes.length*2;
+        }
+    },
+     watch:{
+        inputValue(val) {
+            console.log(val)
+        }
+     }   
+    
 
     
 }
