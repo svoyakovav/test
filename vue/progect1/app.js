@@ -16,6 +16,7 @@ const App ={
         addNote(){
             this.notes.push(this.inputValue);
             this.inputValue = '';
+            console.log('addNote');
         },
         deletenote(key){
             this.notes.splice(key,1);
