@@ -28,12 +28,16 @@
             <button class="btn" v-on:click="addNote"> добавить </button>
             </div>
              <ul class="list">
-                <li class="list-item" 
-                    v-for = "(name,i) in notes"> {{i+ ' '}}  {{name}}
-                    <button class="btn danger"
-                     v-on:click = "deletenote(i)"
-                     >
-                     удалить</button>
+                <li class="list-item" v-for = "(name,i) in notes">
+                     <!-- <span :class="name.length >3 ? 'primary' : 'bold'"> {{i+ ' '}}  {{name}} </span> -->
+                     <span :class="{
+                        'bold':true,
+                        'primary': name.length >3 
+                     }"> {{i+ ' '}}  {{name}} </span>
+                   
+                     <button class="btn danger" v-on:click = "deletenote(i)">
+                     удалить
+                    </button>
                 
                 </li>
              
