@@ -1,0 +1,183 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "web ciska API gateway",
+    "version": "1.0.0",
+    "description": "REST API Заявки на ремонт",
+    "license": {
+      "name": "Licensed Under MIT",
+      "url": "https://spdx.org/licenses/MIT.html"
+    },
+    "contact": {
+      "name": "Свояков Алексей",
+      "url": "SvoyakovAV@kuazot.ru",
+      "contactinfo": "dgsdgsdg"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://gateway.ciska.kuazot.ru",
+      "description": "Шлюз для доступа к API сервисов "
+    }
+  ],
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "apiKey",
+      "name": "Authorization",
+      "scheme": "bearer",
+      "in": "header"
+    }
+  },
+  "paths": {
+    "/get_users": {
+      "get": {
+        "operationId": "get_users",
+        "summary": "Единое окно",
+        "description": "REST API приложения Единое окно",
+        "security": [
+          {
+            "ApiKeyAuth": [
+              "auth"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "offset",
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The number of items to skip before starting to collect the result set"
+          },
+          {
+            "in": "query",
+            "name": "p_id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The numbers of items to return"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "description": "The user ID."
+                    },
+                    "username": {
+                      "type": "string",
+                      "description": "The user name."
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "error"
+          }
+        }
+      }
+    },
+    "/set_users": {
+      "post": {
+        "operationId": "set_users",
+        "summary": "Create a JSONPlaceholder user.",
+        "security": [
+          {
+            "ApiKeyAuth": [
+              "auth"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "P_NAME": {
+                    "type": "array",
+                    "example": "p_name[]",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "p_id1": {
+                    "type": "string",
+                    "description": "ид",
+                    "example": "p_id[]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "error"
+          }
+        }
+      }
+    },
+    "/set_users1": {
+      "post": {
+        "operationId": "set_users",
+        "summary": "Create a JSONPlaceholder user.",
+        "security": [
+          {
+            "ApiKeyAuth": [
+              "auth"
+            ]
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "P_NAME1": {
+                    "type": "array",
+                    "example": "p_name[]",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "p_id2": {
+                    "type": "string",
+                    "description": "ид",
+                    "example": "p_id[]"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "error"
+          }
+        }
+      }
+    }
+  },
+  "components": {},
+  "tags": []
+}
