@@ -1,4 +1,4 @@
 sudo npm install -g swagger-nodegen-cli
 sudo npm install -g swagger-jsdoc
 sudo swagger-jsdoc -d swagger-def.js routes/*.js
-sc generate -i swagger.json -l html
+sudo sc generate -i swagger.json -l html
