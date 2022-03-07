@@ -6,20 +6,16 @@ module.exports = {
     version: '1.0.0',
     description:
       'REST API Заявки на ремонт',
-    license: {
-      name: 'Licensed Under MIT',
-      url: 'https://spdx.org/licenses/MIT.html',
-    },
     contact: {
       name: 'Свояков Алексей',
-      url: 'SvoyakovAV@kuazot.ru'
+      url: 'https://www.kuazot.ru',
+      email: 'svoyakovav@kuazot.ru'
     },
   },
   servers: [
     {
       url: 'https://gateway.ciska.kuazot.ru',
-      description: 'Шлюз для доступа к API сервисов ',
-    },
-  ]
+      description: 'Шлюз для доступа к API REST сервисам ПАО КуйбышевАзот'
+    }
+  ]  
 };
-
