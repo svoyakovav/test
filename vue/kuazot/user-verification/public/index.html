@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="user-verification-app"></div>
+    <script>
+      var session = {
+        card_id: 63959,
+        company: "101",
+        deptCode: "0060",
+        deptName: "0060-УПРАВЛЕНИЕ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ",
+        deptSectorName: "Сектор проектирования и разработки информационных систем",
+        deptShortName: "УИТ",
+        fio: "Винокуров Данил Алексеевич",
+        inn: "245717400884",
+        ip: "127.0.0.1",
+        mail: "VinokurovDA@kuazot.ru",
+        post: "Администратор баз данных",
+        responsibility: "CiskaManufacturing",
+        station: "",
+        tabnum: "068748",
+        tel: "",
+        username: "vinokurovda",
+        workTel: "",
+        token: "ae0e2c67bb3d83132f26a84e72113087",
+};
+      var API_HOST = "https://gateway.kuazot.ru/prod";
+    </script>
+  </body>
+</html>
