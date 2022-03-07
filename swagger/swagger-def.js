@@ -12,8 +12,7 @@ module.exports = {
     },
     contact: {
       name: 'Свояков Алексей',
-      url: 'SvoyakovAV@kuazot.ru',
-      contactinfo: 'dgsdgsdg',
+      url: 'SvoyakovAV@kuazot.ru'
     },
   },
   servers: [
@@ -21,14 +20,6 @@ module.exports = {
       url: 'https://gateway.ciska.kuazot.ru',
       description: 'Шлюз для доступа к API сервисов ',
     },
-  ],
-  securityDefinitions: {
-    bearerAuth: {
-      type: 'apiKey',
-      name: 'Authorization',
-      scheme: 'bearer',
-      in: 'header',
-    },
-  },  
+  ]
 };
 

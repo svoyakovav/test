@@ -10,8 +10,7 @@
     },
     "contact": {
       "name": "Свояков Алексей",
-      "url": "SvoyakovAV@kuazot.ru",
-      "contactinfo": "dgsdgsdg"
+      "url": "SvoyakovAV@kuazot.ru"
     }
   },
   "servers": [
@@ -20,14 +19,6 @@
       "description": "Шлюз для доступа к API сервисов "
     }
   ],
-  "securityDefinitions": {
-    "bearerAuth": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "scheme": "bearer",
-      "in": "header"
-    }
-  },
   "paths": {
     "/get_users": {
       "get": {
@@ -36,9 +27,7 @@
         "description": "REST API приложения Единое окно",
         "security": [
           {
-            "ApiKeyAuth": [
-              "auth"
-            ]
+            "apiKey": []
           }
         ],
         "parameters": [
@@ -93,9 +82,7 @@
         "summary": "Create a JSONPlaceholder user.",
         "security": [
           {
-            "ApiKeyAuth": [
-              "auth"
-            ]
+            "apiKey": []
           }
         ],
         "requestBody": {
@@ -134,13 +121,11 @@
     },
     "/set_users1": {
       "post": {
-        "operationId": "set_users",
+        "operationId": "set_users1",
         "summary": "Create a JSONPlaceholder user.",
         "security": [
           {
-            "ApiKeyAuth": [
-              "auth"
-            ]
+            "apiKey": []
           }
         ],
         "requestBody": {
@@ -178,6 +163,14 @@
       }
     }
   },
-  "components": {},
+  "components": {
+    "securitySchemes": {
+      "apiKey": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-KEY"
+      }
+    }
+  },
   "tags": []
 }

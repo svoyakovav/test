@@ -8,7 +8,7 @@
  *     summary: Единое окно
  *     description: REST API приложения Единое окно
  *     security:
- *       - ApiKeyAuth: [auth]
+ *       - apiKey: []
  *     parameters:
  *       - in: query
  *         name: offset
@@ -48,7 +48,7 @@
  *     operationId: set_users
  *     summary: Create a JSONPlaceholder user.
  *     security:
- *       - ApiKeyAuth: [auth]
+ *       - apiKey: []
  *     requestBody:
  *       required: true
  *       content:
@@ -77,10 +77,10 @@
  * @swagger
  * /set_users1:
  *   post:
- *     operationId: set_users
+ *     operationId: set_users1
  *     summary: Create a JSONPlaceholder user.
  *     security:
- *       - ApiKeyAuth: [auth]
+ *       - apiKey: []
  *     requestBody:
  *       required: true
  *       content:
@@ -102,5 +102,15 @@
  *         description: OK
  *       '500':
  *         description: error
- * 
+*/
+
+/** 
+* @swagger
+* components:
+*  securitySchemes:
+*    apiKey:
+*      type: apiKey
+*      in: header
+*      name: auth
+*
 */
