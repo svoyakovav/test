@@ -4,6 +4,8 @@
  * @swagger
  * /get_users:
  *   get:
+*     tags:
+ *       - get_users
  *     operationId: get_users
  *     summary: Единое окно
  *     description: REST API приложения Единое окно
@@ -45,6 +47,8 @@
  * @swagger
  * /set_users:
  *   post:
+*     tags:
+ *       - set_users
  *     operationId: set_users
  *     summary: Create a JSONPlaceholder user.
  *     security:
@@ -77,7 +81,9 @@
  * @swagger
  * /set_users1:
  *   post:
- *     operationId: set_users1
+ *     tags:
+ *       - set_users
+ *     operationId: SetUsers1
  *     summary: Create a JSONPlaceholder user.
  *     security:
  *       - apiKey: []
